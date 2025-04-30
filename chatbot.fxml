@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane prefHeight="480.0" prefWidth="320.0" style="-fx-background-color: linear-gradient(to bottom right, #0e0e0e, #1a1a1a);" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="volter.com.example.appscrumteam.ChatbotController">
+
+    <children>
+
+        <!-- Left Glowing vertical bar -->
+        <Rectangle arcHeight="10" arcWidth="10" fill="#00e5ff" height="480.0" width="4.0">
+            <effect>
+                <DropShadow color="#00e5ff" radius="18" spread="0.5" />
+            </effect>
+        </Rectangle>
+
+        <!-- Right Glowing vertical bar -->
+        <Rectangle arcHeight="10" arcWidth="10" fill="#00e5ff" height="480.0" layoutX="316.0" width="4.0">
+            <effect>
+                <DropShadow color="#00e5ff" radius="18" spread="0.5" />
+            </effect>
+        </Rectangle>
+
+        <!-- Frosted glass panel -->
+        <StackPane layoutX="20.0" layoutY="20.0" prefHeight="440.0" prefWidth="280.0" styleClass="glass-panel">
+            <children>
+                <AnchorPane>
+
+                    <!-- Chat display -->
+                    <TextArea fx:id="chatArea" editable="false" layoutX="10.0" layoutY="30.0" prefHeight="233.0" prefWidth="260.0" promptText="💬 Awaiting your command..." style="-fx-control-inner-background: black; -fx-text-fill: white; -fx-prompt-text-fill: #888; -fx-border-color: #00e5ff; -fx-border-radius: 5;">
+                        <effect>
+                            <DropShadow color="#00e5ff" radius="10" spread="0.3" />
+                        </effect>
+                    </TextArea>
+
+                    <!-- Input -->
+                    <TextField fx:id="userInput" layoutX="10.0" layoutY="278.0" prefWidth="260.0" promptText="Type something..." style="-fx-control-inner-background: black; -fx-text-fill: white; -fx-prompt-text-fill: #888; -fx-border-color: #00e5ff; -fx-border-radius: 5;">
+                        <effect>
+                            <DropShadow color="#00e5ff" radius="10" spread="0.3" />
+                        </effect>
+                    </TextField>
+
+                    <!-- Buttons -->
+                    <Button fx:id="Switch1Button" layoutX="10.0" layoutY="-8.0" onAction="#Switch2Screen" prefHeight="30.0" prefWidth="260.0" style="-fx-border-radius: 15;-fx-border-color: #00e5ff;-fx-border-width: 2; -fx-background-color: transparent;-fx-effect: dropshadow(three-pass-box, #00e5ff, 10, 0, 0, 0);" text="Chatroom" textFill="#00e5ff" />
+
+                    <Button fx:id="sendButton" layoutX="190.0" layoutY="320.0" prefHeight="30.0" prefWidth="80.0" style="-fx-border-radius: 15; -fx-border-color: #00e5ff; -fx-border-width: 2; -fx-background-color: transparent; -fx-effect: dropshadow(three-pass-box, #00e5ff, 10, 0, 0, 0);" text="🞂" textFill="#00e5ff" AnchorPane.leftAnchor="190.0" AnchorPane.rightAnchor="10.0" />
+
+                    <Button fx:id="clearButton" layoutX="10.0" layoutY="320.0" prefHeight="30.0" prefWidth="170.0" style="-fx-border-radius: 15; -fx-border-color: #00e5ff; -fx-border-width: 2; -fx-background-color: transparent; -fx-effect: dropshadow(three-pass-box, #00e5ff, 10, 0, 0, 0);" text="Clear Chat" textFill="#00e5ff" AnchorPane.leftAnchor="10.0" />
+
+                    <Button fx:id="showEpicButton" layoutX="100.0" layoutY="364.0" onAction="#handleShowEpics" prefHeight="30.0" prefWidth="80.0" style="-fx-border-radius: 15;-fx-border-color: #BC13FE;-fx-border-width: 2; -fx-background-color: transparent;-fx-effect: dropshadow(three-pass-box, #BC13FE, 10, 0, 0, 0);" text="Show " textFill="#BC13FE" AnchorPane.rightAnchor="100.0" />
+
+                    <Button fx:id="epicButton" layoutX="10.0" layoutY="364.0" onAction="#startEpicCreation" prefHeight="30.0" prefWidth="80.0" style="-fx-border-radius: 15;-fx-border-color: #BC13FE;-fx-border-width: 2; -fx-background-color: transparent;-fx-effect: dropshadow(three-pass-box, #BC13FE, 10, 0, 0, 0);" text="Create " textFill="#BC13FE" AnchorPane.leftAnchor="10.0" />
+
+                    <Button fx:id="returnButton" layoutX="10.0" layoutY="410.0" onAction="#startEpicCreation" prefHeight="30.0" prefWidth="170.0" style="-fx-border-radius: 15;-fx-border-color: #BC13FE;-fx-border-width: 2; -fx-background-color: transparent;-fx-effect: dropshadow(three-pass-box, #BC13FE, 10, 0, 0, 0);" text="Return " textFill="#BC13FE" />
+
+                    <Button fx:id="sendEpicButton" layoutX="190.0" layoutY="364.0" onAction="#sendEpic" prefHeight="30.0" prefWidth="80.0" style="-fx-border-radius: 15;-fx-border-color: #BC13FE;-fx-border-width: 2; -fx-background-color: transparent;-fx-effect: dropshadow(three-pass-box, #BC13FE, 10, 0, 0, 0);" text="🞂" textFill="#BC13FE" />
+
+                    <Button fx:id="deleteModeButton" layoutX="190.0" layoutY="410.0" onAction="#toggleDeleteMode"
+                            prefHeight="30.0" prefWidth="80.0"
+                            style="-fx-border-radius: 15;-fx-border-color: #ff073a;-fx-border-width: 2; -fx-background-color: transparent;-fx-effect: dropshadow(three-pass-box, #ff073a, 10, 0, 0, 0);"
+                            text="❌" textFill="#ff073a" />
+
+                </AnchorPane>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>

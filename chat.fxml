@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.geometry.Insets?>
+
+
+<AnchorPane prefHeight="480.0" prefWidth="320.0" style="-fx-background-color: linear-gradient(to bottom right, #0e0e0e, #1a1a1a);" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="volter.com.example.appscrumteam.Chatroom">
+
+    <children>
+
+        <Rectangle arcHeight="10" arcWidth="10" fill="#00e5ff" height="480.0" width="4.0">
+            <effect>
+                <DropShadow color="#00e5ff" radius="18" spread="0.5" />
+            </effect>
+        </Rectangle>
+
+        <Rectangle arcHeight="10" arcWidth="10" fill="#00e5ff" height="480.0" layoutX="316.0" width="4.0">
+            <effect>
+                <DropShadow color="#00e5ff" radius="18" spread="0.5" />
+            </effect>
+        </Rectangle>
+
+        <StackPane layoutX="20.0" layoutY="20.0" prefHeight="440.0" prefWidth="280.0" styleClass="glass-panel">
+            <children>
+                <AnchorPane>
+
+                    <ScrollPane fx:id="chatScrollPane" layoutX="10.0" layoutY="42.0" prefHeight="269.0" prefWidth="260.0" style="-fx-background: black;" AnchorPane.bottomAnchor="128.4" AnchorPane.topAnchor="30.0">
+                        <content>
+                            <VBox fx:id="chatContainer" spacing="8">
+                                <padding>
+                                    <Insets top="10" right="10" bottom="10" left="10"/>
+                                </padding>
+                            </VBox>
+                        </content>
+                    </ScrollPane>
+
+                    <TextField fx:id="Input2Field" layoutX="10.0" layoutY="322.0" prefWidth="260.0" promptText="Type..." style="-fx-control-inner-background: black; -fx-text-fill: white; -fx-prompt-text-fill: #888; -fx-border-color: #00e5ff; -fx-border-radius: 5;" AnchorPane.bottomAnchor="90.8" AnchorPane.topAnchor="322.0">
+                        <effect>
+                            <DropShadow color="#00e5ff" radius="10" spread="0.3" />
+                        </effect>
+                    </TextField>
+
+                    <Button fx:id="SendButton" layoutX="154.0" layoutY="369.0" prefHeight="30.0" prefWidth="120.0" style="-fx-border-radius: 15; -fx-border-color: #00e5ff; -fx-border-width: 2; -fx-background-color: transparent; -fx-effect: dropshadow(three-pass-box, #00e5ff, 10, 0, 0, 0);" text="🞂" textFill="#00e5ff" AnchorPane.rightAnchor="15.0" />
+
+                    <Button fx:id="showTrioButton" layoutX="14.0" layoutY="369.0" prefHeight="30.0" prefWidth="120.0" style="-fx-border-radius: 15; -fx-border-color: #BC13FE; -fx-border-width: 2; -fx-background-color: transparent; -fx-effect: dropshadow(three-pass-box, #BC13FE, 10, 0, 0, 0);" text="Show" textFill="#BC13FE" AnchorPane.leftAnchor="14.0" AnchorPane.rightAnchor="146.0" />
+
+                    <Button fx:id="deleteMessageButton" layoutX="145.0" layoutY="411.0" onAction="#deleteAllMessages" prefHeight="30.0" prefWidth="120.0" style="-fx-border-radius: 15;-fx-border-color: #ff073a;-fx-border-width: 2; -fx-background-color: transparent;-fx-effect: dropshadow(three-pass-box, #ff073a, 10, 0, 0, 0);" text="❌" textFill="#ff073a" AnchorPane.bottomAnchor="0.2" />
+
+                    <Button fx:id="Switch2Button" layoutX="11.0" layoutY="-1.0" onAction="#SwitchScreen" prefHeight="30.0" prefWidth="105.0" style="-fx-border-radius: 15;-fx-border-color: #00e5ff;-fx-border-width: 2; -fx-background-color: transparent;-fx-effect: dropshadow(three-pass-box, #00e5ff, 10, 0, 0, 0);" text="Chatbot" textFill="#00e5ff" AnchorPane.topAnchor="-8.0" />
+
+                    <Button fx:id="ClearButton" layoutX="24.0" layoutY="379.0" prefHeight="30.0" prefWidth="120.0" style="-fx-border-radius: 15; -fx-border-color: #00e5ff; -fx-border-width: 2; -fx-background-color: transparent; -fx-effect: dropshadow(three-pass-box, #00e5ff, 10, 0, 0, 0);" text="Clear" textFill="#00e5ff" AnchorPane.bottomAnchor="0.2" />
+
+                    <Button fx:id="showDecisionsButton" layoutX="152.0" layoutY="-8.0" onAction="#showMarkedDecisions" prefHeight="30.0" prefWidth="105.0" style="-fx-border-radius: 15;-fx-border-color: #00e5ff;-fx-border-width: 2; -fx-background-color: transparent;-fx-effect: dropshadow(three-pass-box, #00e5ff, 10, 0, 0, 0);" text="Decisions" textFill="#00e5ff" />
+
+                </AnchorPane>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>

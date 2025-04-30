@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane prefHeight="480.0" prefWidth="320.0" style="-fx-background-color: linear-gradient(to bottom right, #0e0e0e, #1a1a1a);" xmlns="http://javafx.com/javafx/11.0.14-internal" xmlns:fx="http://javafx.com/fxml/1" fx:controller="volter.com.example.appscrumteam.Authenticate">
+
+    <children>
+
+        <!-- Left Glowing vertical bar -->
+        <Rectangle arcHeight="10" arcWidth="10" fill="#00e5ff" height="480.0" width="4.0">
+            <effect>
+                <DropShadow color="#00e5ff" radius="18" spread="0.5" />
+            </effect>
+        </Rectangle>
+
+        <!-- Right Glowing vertical bar -->
+        <Rectangle arcHeight="10" arcWidth="10" fill="#00e5ff" height="480.0" layoutX="316.0" width="4.0">
+            <effect>
+                <DropShadow color="#00e5ff" radius="18" spread="0.5" />
+            </effect>
+        </Rectangle>
+
+        <!-- Frosted glass panel -->
+        <StackPane layoutX="20.0" layoutY="20.0" prefHeight="440.0" prefWidth="280.0" styleClass="glass-panel">
+            <children>
+                <AnchorPane>
+
+                    <!-- Input -->
+                    <TextField fx:id="PwordField" layoutX="10.0" layoutY="286.0" prefWidth="260.0" promptText="Password..." style="-fx-control-inner-background: black; -fx-text-fill: white; -fx-prompt-text-fill: #888; -fx-border-color: #00e5ff; -fx-border-radius: 5;" AnchorPane.bottomAnchor="120.0">
+                        <effect>
+                            <DropShadow color="#00e5ff" radius="10" spread="0.3" />
+                        </effect>
+                    </TextField>
+                    <Button fx:id="RegisterButton" layoutX="14.0" layoutY="369.0" prefHeight="30.0" prefWidth="111.0" style="-fx-border-radius: 15; -fx-border-color: #BC13FE; -fx-border-width: 2; -fx-background-color: transparent; -fx-effect: dropshadow(three-pass-box, #BC13FE, 10, 0, 0, 0);" text="Register" textFill="#BC13FE" />
+                    <TextField fx:id="UsernameField" layoutX="10.0" layoutY="239.0" prefWidth="260.0" promptText="Username..." style="-fx-control-inner-background: black; -fx-text-fill: white; -fx-prompt-text-fill: #888; -fx-border-color: #00e5ff; -fx-border-radius: 5;" AnchorPane.bottomAnchor="220.0">
+                        <effect>
+                            <DropShadow color="#00e5ff" radius="10" spread="0.3" />
+                        </effect>
+                    </TextField>
+                    <TextField fx:id="EmailField" layoutX="10.0" layoutY="192.0" prefWidth="260.0" promptText="Email..." style="-fx-control-inner-background: black; -fx-text-fill: white; -fx-prompt-text-fill: #888; -fx-border-color: #00e5ff; -fx-border-radius: 5;" AnchorPane.bottomAnchor="170.0">
+                        <effect>
+                            <DropShadow color="#00e5ff" radius="10" spread="0.3" />
+                        </effect>
+                    </TextField>
+                    <Button fx:id="LoginButton" layoutX="154.0" layoutY="369.0" prefHeight="30.0" prefWidth="111.0" style="-fx-border-radius: 15; -fx-border-color: #BC13FE; -fx-border-width: 2; -fx-background-color: transparent; -fx-effect: dropshadow(three-pass-box, #BC13FE, 10, 0, 0, 0);" text="Login" textFill="#BC13FE" />
+                    <Text fill="#00e5ff" layoutX="69.0" layoutY="169.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Register/Login">
+                        <font>
+                            <Font size="22.0" />
+                        </font></Text>
+                    <Circle layoutX="140.0" layoutY="77.0" radius="53.0" stroke="#00e5ff" strokeWidth="2.0">
+                        <effect>
+                            <DropShadow color="#00e5ff" radius="20" spread="0.6" />
+                        </effect>
+                    </Circle>
+                    <Text layoutX="107.0" layoutY="104.0" strokeType="OUTSIDE" strokeWidth="0.0" text="👤">
+                        <font>
+                            <Font size="67.0" />
+                        </font>
+                        <effect>
+                            <DropShadow color="#BC13FE" radius="15" spread="0.5" />
+                        </effect>
+                    </Text>
+                </AnchorPane>
+            </children>
+        </StackPane>
+    </children>
+</AnchorPane>

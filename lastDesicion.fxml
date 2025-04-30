@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="volter.com.example.appscrumteam.LastDesicionController">
+
+    <VBox layoutX="14.0" layoutY="20.0" prefHeight="337.0" prefWidth="571.0" spacing="10">
+
+        <TextArea fx:id="decisionTextArea" editable="false" prefHeight="300" prefWidth="560" style="-fx-font-size: 14px;" wrapText="true" />
+    </VBox>
+     <Label layoutX="244.0" prefHeight="27.0" prefWidth="220.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Beslissingen" textFill="#329def" />
+
+     <Button fx:id="closeButton" layoutX="237.0" layoutY="345.0" prefWidth="100" text="Sluiten" />
+
+</AnchorPane>
